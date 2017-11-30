@@ -2,9 +2,9 @@
   "name": "jsmetrics",
   "version": "1.0.0",
   "description": "Calculating different static source code metrics for JavaScript.",
-  "main": "jsmetrics.js",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "standard --fix && mocha"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,14 @@
   },
   "homepage": "https://github.com/zizo007/JSMetrics#readme",
   "devDependencies": {
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "command-line-args": "^4.0.7",
+    "command-line-usage": "^4.0.1",
+    "esprima": "^4.0.0",
+    "estraverse": "^4.2.0"
   }
 }

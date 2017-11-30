@@ -1,0 +1,40 @@
+{
+	"levels": [
+		{
+			"level": "function",
+			"metrics": {
+				"loc": true,
+				"lloc": true
+			}
+		},
+		{
+			"level": "method",
+			"metrics": {
+				"loc": true,
+				"lloc": true
+			}
+		},
+		{
+			"level": "class",
+			"metrics": {
+				"loc": true,
+				"lloc": true
+			}
+		},
+		{
+			"level": "file",
+			"metrics": {
+				"loc": true,
+				"lloc": true
+			}
+		},
+		{
+			"level": "system",
+			"metrics": {
+				"loc": true,
+				"lloc": true
+			}
+		}
+	]
+	
+}
