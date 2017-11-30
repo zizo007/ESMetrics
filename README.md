@@ -5,6 +5,6 @@
 ## List of metrics
 
 * LOC
-** LLOC (under development)
+* LLOC (under development)
 
 ## Usage
