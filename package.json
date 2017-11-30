@@ -1,0 +1,26 @@
+{
+  "name": "jsmetrics",
+  "version": "1.0.0",
+  "description": "Calculating different static source code metrics for JavaScript.",
+  "main": "jsmetrics.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zizo007/JSMetrics.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Static Source Code Metrics"
+  ],
+  "author": "Zoltán Tóth <zizo@inf.u-szeged.hu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zizo007/JSMetrics/issues"
+  },
+  "homepage": "https://github.com/zizo007/JSMetrics#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
