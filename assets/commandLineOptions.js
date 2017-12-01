@@ -1,7 +1,7 @@
 const definitions = [
-  { name: 'help', alias: 'h' },
-  { name: 'input', alias: 'i', type: String, multiple: true, defaultOption: true },
-  { name: 'ast', alias: 'a', type: String}
+  { name: 'help', alias: 'h', type: Boolean, description: 'Prints out this help.'},
+  { name: 'input', alias: 'i', type: String, multiple: true, defaultOption: true, description: 'A list of javascript files/directories to be analyzed.' }/*,
+  { name: 'ast', alias: 'a', type: String, description: 'An esprima AST'} */
 ]
 
 module.exports.definitions = definitions
