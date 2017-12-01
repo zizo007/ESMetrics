@@ -6,6 +6,8 @@ var colors = require('colors')
 const path = require('path')
 const fs = require('fs')
 const jsmetrics = require('./lib/jsmetrics')
+const esprima = require('esprima')
+const util = require('util')
 
 colors.setTheme(colorConfig)
 
@@ -39,6 +41,20 @@ function gatherSourceFiles (paths) {
   return normalizedAbsPaths
 }
 
+function parse (sourceCode) {
+  var ast
+  try {
+    ast = esprima.parseScript(sourceCode, {loc: true})
+  } catch (e) {
+    try {
+      ast = esprima.parseScript(sourceCode, {loc: true})
+    } catch (err) {
+      return null
+    }
+  }
+  return ast
+}
+
 var options
 try {
   options = commandLineArgs(commandLineOptions.definitions)
@@ -65,8 +81,14 @@ if (sourceFiles.length < 1) {
   process.exit(1)
 }
 
+var asts = []
 // perform esprima parsing on the source files
 console.log(sourceFiles)
 for (var i = 0; i < sourceFiles.length; i++) {
-  jsmetrics.calculateMetrics(sourceFiles[i])
+  var fileContent = fs.readFileSync(sourceFiles[i], 'utf8')
+  var ast = parse(fileContent)
+  asts.push(ast)
 }
+
+jsmetrics.calculateMetrics(asts)
+// console.log(util.inspect(ast, {depth: null}))
